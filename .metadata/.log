@@ -11533,3 +11533,8 @@ java.lang.NullPointerException
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2016-02-01 16:09:00.175
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui 4 0 2016-02-01 16:10:54.914
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
