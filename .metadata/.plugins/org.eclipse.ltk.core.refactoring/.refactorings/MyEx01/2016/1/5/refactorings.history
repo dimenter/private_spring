@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;MyEx03/src/main/resources&apos;&#x0A;- Original project: &apos;MyEx01&apos;&#x0A;- Destination element: &apos;MyEx03/src/main/resources&apos;&#x0A;- Original elements:&#x0A;     log4j.xml&#x0A;     mybatis-config.xml&#x0A;     logback.xml&#x0A;     log4jdbc.log4j2.properties" description="Copy files" destination="=MyEx03/src\/main\/resources" element1="src/main/resources/log4j.xml" element2="src/main/resources/mybatis-config.xml" element3="src/main/resources/logback.xml" element4="src/main/resources/log4jdbc.log4j2.properties" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1453618609639" units="0" version="1.0"/>
+</session>

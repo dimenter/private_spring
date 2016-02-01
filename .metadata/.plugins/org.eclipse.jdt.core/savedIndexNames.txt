@@ -1,0 +1,25 @@
+INDEX VERSION 1.127+/Users/dimenter/Programming/Spring/.metadata/.plugins/org.eclipse.jdt.core
+3139407872.index
+325969705.index
+69051298.index
+2006603550.index
+3612148700.index
+2887089464.index
+3793441144.index
+63220412.index
+2192412477.index
+3003424558.index
+4081637397.index
+4197922834.index
+969958788.index
+4107294219.index
+3189230041.index
+3759842616.index
+3110923064.index
+274029178.index
+2603461161.index
+3951468425.index
+35978131.index
+3628412171.index
+1965280005.index
+1675485135.index
