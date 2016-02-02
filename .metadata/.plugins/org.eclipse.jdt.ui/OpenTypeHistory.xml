@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=MyEx01/src\/main\/java&lt;org.zerock.persistence{BoardDAO.java[BoardDAO" modifiers="513" timestamp="1453458003000"/>
-<typeInfo handle="=MyEx03/src\/main\/java&lt;org.zerock.persistence{ReplyDAO.java[ReplyDAO" modifiers="513" timestamp="1453618254000"/>
+<typeInfo handle="=MyEx02/src\/main\/java&lt;org.zerock.persistence{ReplyDAO.java[ReplyDAO" modifiers="513" timestamp="1454333316000"/>
+<typeInfo handle="=MyEx02/src\/main\/java&lt;org.zerock.service{ReplyService.java[ReplyService" modifiers="513" timestamp="1454336256000"/>
 </typeInfoHistroy>

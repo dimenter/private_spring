@@ -5,7 +5,26 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-01-28T14:23:00Z</updated>
+  <updated>2016-02-01T11:34:07Z</updated>
+  <entry>
+    <title>Spring IO Platform 2.0.2.RELEASE</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/02/01/spring-io-platform-2-0-2-release" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2016-02-01:2362</id>
+    <updated>2016-02-01T11:34:07Z</updated>
+    <content type="html">&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Spring IO Platform&lt;/a&gt; 2.0.2.RELEASE is now available from both &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3Aio.spring.platform"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;This maintenance release upgrades the versions of a number of the projects in the Platform to pick up their latest maintenance releases:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring AMQP 1.5.3.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring Boot 1.3.2.RELEASE&lt;/li&gt;
+  &lt;li&gt;Spring Integration Java DSL 1.1.2.RELEASE&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The versions of several third-party dependencies have also been updated.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://platform.spring.io/platform"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-io/platform/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/platform/docs/2.0.2.RELEASE/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Java DSL for Spring Integration 1.1.2 is available now</title>
     <link rel="alternate" href="https://spring.io/blog/2016/01/28/java-dsl-for-spring-integration-1-1-2-is-available-now" />
@@ -500,130 +519,5 @@ public UnZipTransformer unZipTransformer() {&#xD;
   &lt;li&gt;Mert Caliskan has put together &lt;a href="https://dzone.com/articles/bootiful-enterprise-applications-powered-by-spring"&gt;a nice post on deploying Spring Boot applications onto the Payara Micro application server&lt;/a&gt;. Payara is a GlassFish variant. It&amp;rsquo;s a good post but also mistakenly implies that Spring requires XML, which is just not true. Indeed, you can use Servlet 3.0, JPA, dependency injection and a slew of other Java EE technologies &lt;em&gt;without&lt;/em&gt; requisite Java EE XML files (why does this article have an emtpy &lt;code&gt;web.xml&lt;/code&gt;?) in basic Spring and Spring itself certainly doesn&amp;rsquo;t require XML. I&amp;rsquo;m also a little confused why this application didn&amp;rsquo;t simply use the typical Maven &lt;code&gt;pom.xml&lt;/code&gt; as generated from the Spring Initializr which, among other things, pre-configures Java 1.8 support. All that aside, it&amp;rsquo;s a nice article and interesting if you&amp;rsquo;re going that way!&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;(I &lt;em&gt;almost&lt;/em&gt; dated the post &lt;em&gt;2015&lt;/em&gt; by accident!)&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Testing Spring Cloud Projects</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/01/04/testing-spring-cloud-projects" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Marcin Grzejszczak</name>
-    </author>
-    <id>tag:spring.io,2016-01-03:2334</id>
-    <updated>2016-01-04T17:21:00Z</updated>
-    <content type="html">&lt;p&gt;Welcome to my first blog post as a Spring Cloud team member :)&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s been a month since I joined and it&amp;rsquo;s worth to share some of the interesting things that took place during that time.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;ve been reading any of my posts at my &lt;a href="http://toomuchcoding.blogspot.com"&gt;Too Much Coding blog&lt;/a&gt; then you know that I&amp;rsquo;m crazy about two things - testing and microservices. Since all that I do at the moment is microservice related today&amp;rsquo;s post will be about testing.&lt;/p&gt;&lt;h1&gt;&lt;a href="#the-spring-cloud-projects" class="anchor" name="the-spring-cloud-projects"&gt;&lt;/a&gt;The Spring Cloud projects&lt;/h1&gt;
-&lt;p&gt;When I joined Spring Cloud team I did a quick scan of the Github and it turned out that we have quite a few projects to govern including:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-netflix/"&gt;Spring Cloud Netflix&lt;/a&gt; (including Eureka Discovery Service and Registry, Hystrix, Feign and RIbbon support)&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-zookeeper/"&gt;Spring Cloud Zookeeper&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-consul"&gt;Spring Cloud Consul&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth"&gt;Spring Cloud Sleuth&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;All of them depend on Spring and Spring Boot. Of course each of them has its own version. That&amp;rsquo;s a lot of interchanging dependencies, isn&amp;rsquo;t it?&lt;/p&gt;&lt;h1&gt;&lt;a href="#how-to-test-dependencies" class="anchor" name="how-to-test-dependencies"&gt;&lt;/a&gt;How to test dependencies?&lt;/h1&gt;
-&lt;p&gt;I wanted to be sure that if someone changes something in Spring core or Spring Boot then we will immediately know that our libraries are still operational. Of course we could create a repetitive build on our CI tool but even though the integration tests would be passing - there is still a possibility of having issues with classpaths and JAR packaging. &lt;/p&gt;
-&lt;p&gt;What I suggested was to write a couple of end to end tests&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Now whoever read this post of mine about &lt;a href="http://toomuchcoding.blogspot.com/2015/09/microservice-deployment.html"&gt;Microservice Deployment&lt;/a&gt; would say that I&amp;rsquo;ve gone crazy cause I was completely against end to end tests in that particular scenario. So what has changed?&lt;/p&gt;&lt;h2&gt;&lt;a href="#why-end-to-end-tests-were-a-good-idea" class="anchor" name="why-end-to-end-tests-were-a-good-idea"&gt;&lt;/a&gt;Why end to end tests were a good idea?&lt;/h2&gt;&lt;h3&gt;&lt;a href="#binary-approach-is-it-working-or-not" class="anchor" name="binary-approach-is-it-working-or-not"&gt;&lt;/a&gt;Binary approach - is it working or not?&lt;/h3&gt;
-&lt;p&gt;With such a large number of projects, at this point in time I didn&amp;rsquo;t want to roam through all Github repositories, check their tests and reassure myself that everything is working fine. I wanted a black box solution that would tell me if the applications are working or not.&lt;/p&gt;&lt;h3&gt;&lt;a href="#cross-project-testing" class="anchor" name="cross-project-testing"&gt;&lt;/a&gt;Cross-project testing&lt;/h3&gt;
-&lt;p&gt;The created applications would be using many different projects of ours. The end to end tests would pick any breaking changes in those.&lt;/p&gt;&lt;h3&gt;&lt;a href="#application-packaging" class="anchor" name="application-packaging"&gt;&lt;/a&gt;Application packaging&lt;/h3&gt;
-&lt;p&gt;A couple of times I&amp;rsquo;ve checked the tests, did a &lt;code&gt;./gradlew bootRun&lt;/code&gt; and everything seemed to be working. Apart from the fact that &lt;code&gt;java -jar ...&lt;/code&gt; didn&amp;rsquo;t work cause the packaging was broken. I wanted to test that too.&lt;/p&gt;&lt;h3&gt;&lt;a href="#sample-of-usage" class="anchor" name="sample-of-usage"&gt;&lt;/a&gt;Sample of usage&lt;/h3&gt;
-&lt;p&gt;I wanted to create a couple of projects that would present the way Spring Cloud could be used. I wanted to step into a new Spring Cloud user&amp;rsquo;s shoes and have a place where I can quickly set up the whole world of applications, infrastructure and click around to see what are the reactions.&lt;/p&gt;&lt;h1&gt;&lt;a href="#the-brewery-project" class="anchor" name="the-brewery-project"&gt;&lt;/a&gt;The Brewery project&lt;/h1&gt;
-&lt;p&gt;Since I&amp;rsquo;ve been giving a number of &lt;a href="http://lanyrd.com/profile/marcin-grzejszczak/past/"&gt;talks about microservices&lt;/a&gt; I already had sample code prepared (kudos to &lt;a href="https://github.com/szimano"&gt;Szimano&lt;/a&gt; who is the co-author of the initial solution). I&amp;rsquo;ve tweaked it, bent it and hacked it and here came the &lt;a href="https://github.com/spring-cloud-samples/brewery"&gt;Brewery&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#the-high-overview" class="anchor" name="the-high-overview"&gt;&lt;/a&gt;The high overview&lt;/h2&gt;
-&lt;p&gt;The overall idea is that there are 3 applications that talk to each other:&lt;br/&gt;- presenting service&lt;br/&gt;- brewing service&lt;br/&gt;- zuul service&lt;/p&gt;
-&lt;p&gt;The &lt;strong&gt;presenting service&lt;/strong&gt; is a UI for the user where he can order ingredients for the beer to be brewed. It also has in its backend the statuses of brewing processes.&lt;/p&gt;
-&lt;p&gt;Here is the UI of the service:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/spring-cloud-samples/brewery/master/img/Brewery_UI.png" alt="Diagram" /&gt;&lt;/p&gt;
-&lt;p&gt;The &lt;strong&gt;brewing service&lt;/strong&gt; is a big application that is responsible for multiple functionalities. Initially it was split into a couple of microservices but for simplicity’s sake we decided to drop the number of deployable units. Coming back to the functionalities, these are:&lt;br/&gt;- collecting ingredients&lt;br/&gt;- maturing the beer&lt;br/&gt;- putting the beers into bottles&lt;br/&gt;- reporting (listening to the events in the system and putting them to an in memory data store)&lt;/p&gt;
-&lt;p&gt;The &lt;strong&gt;zuul service&lt;/strong&gt; is just a Zuul router.&lt;/p&gt;
-&lt;p&gt;The idea of this system is that all of the components are either using Service Discovery or Spring Cloud Stream to communicate between each other. &lt;/p&gt;
-&lt;p&gt;Check out the &lt;a href="https://github.com/spring-cloud-samples/brewery/blob/master/README.md"&gt;Readme&lt;/a&gt; for more information about the project structure.&lt;/p&gt;&lt;h2&gt;&lt;a href="#re-usability" class="anchor" name="re-usability"&gt;&lt;/a&gt;Re-usability&lt;/h2&gt;
-&lt;p&gt;What I wanted to achieve is re-usability. In order to test &lt;a href="https://github.com/spring-cloud/spring-cloud-sleuth"&gt;Spring Cloud Sleuth&lt;/a&gt; with &lt;a href="https://github.com/spring-cloud/spring-cloud-zookeeper/"&gt;Spring Cloud Zookeeper&lt;/a&gt; as Service Registry I didn&amp;rsquo;t want to change any code. Just wanted to run the tests with different parameters.&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;re using Spring Cloud abstractions to do that so if we change from Eureka to Consul then no code should change at all and the applications should still be able to communicate (it&amp;rsquo;s a matter of a JAR and configuration change). I wanted to test that too.&lt;/p&gt;&lt;h2&gt;&lt;a href="#conventions" class="anchor" name="conventions"&gt;&lt;/a&gt;Conventions&lt;/h2&gt;
-&lt;p&gt;here are a bunch of conventions in the Brewery app. The main one is that you have a specific suffix to the &lt;code&gt;docker-compose&lt;/code&gt; yml files that corresponds to the tested functionality.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;docker-compose-CONSUL.yml&lt;/li&gt;
-  &lt;li&gt;docker-compose-EUREKA.yml&lt;/li&gt;
-  &lt;li&gt;docker-compose-SLEUTH_STREAM.yml&lt;/li&gt;
-  &lt;li&gt;docker-compose-SLEUTH.yml&lt;/li&gt;
-  &lt;li&gt;docker-compose-ZOOKEEPER.yml&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Each of those docker-compose files knows how to run the whole world of applications and infrastructure to test the given functionality.&lt;/p&gt;&lt;h2&gt;&lt;a href="#how-to-run-the-apps" class="anchor" name="how-to-run-the-apps"&gt;&lt;/a&gt;How to run the apps?&lt;/h2&gt;
-&lt;p&gt;First you have to build the apps and their Dockerfiles with Gradle. Also you have to pass the &lt;code&gt;WHAT_TO_TEST&lt;/code&gt; system parameter. Basing on that parameter the classpaths of applications are chosen. Example for &lt;code&gt;SLEUTH&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;./gradlew clean build -DWHAT_TO_TEST=SLEUTH --parallel
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Once that&amp;rsquo;s done it&amp;rsquo;s enough to run the aforementioned bash script to run the required applications:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;docker-compose -f docker-compose-SLEUTH.yml up -d
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; : Sometimes the boot order matters so if you want to do things manually please check the corresponding bash file for the given functionality e.g. &lt;code&gt;docker-compose-SLEUTH.sh&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;In general it&amp;rsquo;s much better to boot the applications together with running the tests. How to do that? It&amp;rsquo;s just a one liner. Check out the next section for more information.&lt;/p&gt;&lt;h2&gt;&lt;a href="#how-to-run-the-tests" class="anchor" name="how-to-run-the-tests"&gt;&lt;/a&gt;How to run the tests?&lt;/h2&gt;
-&lt;p&gt;Like the docs say:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;The easiest way is to:&lt;/p&gt;
-  &lt;pre&gt;&lt;code class="prettyprint"&gt;Create a symbolic link somewhere on your drive to the acceptance-tests/scripts/runDockerAcceptanceTests.sh file.
-You can execute that script with such options
-    -t what do you want to test (SLEUTH, ZOOKEEPER etc.)
-    -v in which version of the BOM (defaults to Brixton.BUILD-SNAPSHOT)
-    -h where is your docker host? (defaults to &amp;#39;127.0.0.1&amp;#39; - provide your docker-machine host here)
-    -r is brewery repo already in place and needs to be reset? (defaults to not resetting of repo)
-&lt;/code&gt;&lt;/pre&gt;
-  &lt;p&gt;Once you run the script, the brewery app will be cloned, built with proper lib versions and proper tests will be executed.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;So if you want to run the tests just copy paste the code below:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;git clone https://github.com/spring-cloud-samples/brewery.git&#xD;
-ln -s brewery/acceptance-tests/scripts/runDockerAcceptanceTests.sh  .&#xD;
-bash runDockerAcceptanceTests.sh -t SLEUTH
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;if you&amp;rsquo;re a Mac user the last line should be sth like this (e.g. 192.168.50.60 being your docker-machine IP)&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;bash runDockerAcceptanceTests.sh -t SLEUTH -h 192.168.50.60
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;If you have your dependencies downloaded all the building, downloading and running of tests should take up to 5 minutes.&lt;/p&gt;
-&lt;p&gt;If you have all the applications already setup you can run the acceptance tests manually. Check the next section for more information about this.&lt;/p&gt;&lt;h2&gt;&lt;a href="#how-do-the-tests-look-like-and-how-to-run-them" class="anchor" name="how-do-the-tests-look-like-and-how-to-run-them"&gt;&lt;/a&gt;How do the tests look like and how to run them?&lt;/h2&gt;
-&lt;p&gt;The acceptance tests are present under the &lt;a href="https://github.com/spring-cloud-samples/brewery/tree/master/acceptance-tests"&gt;acceptance-tests&lt;/a&gt; Gradle module of brewery. You can run them either&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;from IDE (remember to pass proper &lt;code&gt;-DWHAT_TO_TEST&lt;/code&gt; system parameter)&lt;/li&gt;
-  &lt;li&gt;from Gradle (example for SLEUTH) &lt;code&gt;./gradlew :acceptance-tests:acceptanceTests -DWHAT_TO_TEST=SLEUTH&lt;/code&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;if you&amp;rsquo;re running on Mac you have to pass additionally the &lt;code&gt;-DLOCAL_URL=192.168.60.50&lt;/code&gt; parameter where &lt;code&gt;192.168.60.50&lt;/code&gt; is the IP of your docker-machine.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The tests are written in Groovy with &lt;a href="http://spockframework.github.io/spock/docs/1.0/"&gt;Spock framework &lt;/a&gt;. If you have never heard of Spock it&amp;rsquo;s high time that you start using it in your project. Check out the &lt;a href="https://github.com/spring-cloud-samples/brewery/blob/master/acceptance-tests/src/test/groovy/io/spring/cloud/samples/brewery/acceptance/SleuthBreweryAcceptanceSpec.groovy"&gt;Github code&lt;/a&gt; with an example of a Spock test used in the Brewery.&lt;/p&gt;
-&lt;p&gt;If you combine Spock with &lt;a href="https://github.com/renatoathaydes/spock-reports"&gt;Spock-reports&lt;/a&gt; then you can get a very nice BDD like output of your tests&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://raw.githubusercontent.com/spring-cloud-samples/brewery/master/img/Spock_reports.png" alt="spock_reports" /&gt;&lt;/p&gt;&lt;h1&gt;&lt;a href="#are-end-to-end-tests-a-silver-bullet" class="anchor" name="are-end-to-end-tests-a-silver-bullet"&gt;&lt;/a&gt;Are end to end tests a silver bullet?&lt;/h1&gt;
-&lt;p&gt;It would seem that everything is awesome but actually it&amp;rsquo;s not. The end to end tests have their good sides but they also definitely have a lot of down sides. Those are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;long feedback cycle (you have to wait around 5 minutes to see if your tests pass)&lt;/li&gt;
-  &lt;li&gt;hard to debug (you have around 8 applications that can break - you have to check the logs of each application to see what went wrong)&lt;/li&gt;
-  &lt;li&gt;network issues and random failures (this is the worst case cause often it&amp;rsquo;s random - suddenly a packet was broken and the Zipkin Server hasn&amp;rsquo;t received a span that was crucial for the tests to pass&amp;hellip;)&lt;/li&gt;
-  &lt;li&gt;testing code lives outside the tested library (fortunately the testing code doesn&amp;rsquo;t change but it&amp;rsquo;s much better to have all the code related to an application be in one repository)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The current setup suits our needs but in fact we want things to improve even further. That&amp;rsquo;s why we&amp;rsquo;re thinking about a couple of improvements to the current test approach.&lt;/p&gt;&lt;h1&gt;&lt;a href="#what-rsquo-s-next" class="anchor" name="what-rsquo-s-next"&gt;&lt;/a&gt;What&amp;rsquo;s next?&lt;/h1&gt;
-&lt;p&gt;Currently the end to end tests are executed together with the build on Travis. But&amp;hellip;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;eventually we&amp;rsquo;re planning to make those tests run in our CI server only on a recurring basis.&lt;/li&gt;
-  &lt;li&gt;we&amp;rsquo;re going to move parts of the end to end tests as integration tests to the given libraries so that it will be much easier to debug any issues&lt;/li&gt;
-  &lt;li&gt;we want to extend our tests so that they are executed also on Cloud Foundry&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The intent is to have faster feedback from our tests that are executed from the library&amp;rsquo;s codebase. Also we want our integration tests to be more reliable.&lt;/p&gt;&lt;h1&gt;&lt;a href="#summary" class="anchor" name="summary"&gt;&lt;/a&gt;Summary&lt;/h1&gt;
-&lt;p&gt;In this post you could see:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;how to brew beer&lt;/li&gt;
-  &lt;li&gt;an approach to testing Open Source libraries using Docker, Docker Compose, Travis, Bash scripts and Gradle&lt;/li&gt;
-  &lt;li&gt;the pros and cons of end to end testing&lt;/li&gt;
-  &lt;li&gt;what are the long term plans of Spring Cloud team towards testing their libraries&lt;/li&gt;
-  &lt;li&gt;agile way of working (we have an approach to testing - the e2e tests - but we know its downsides and we&amp;rsquo;re iteratively planning to migrate to a better solution)&lt;/li&gt;
-&lt;/ul&gt;&lt;h1&gt;&lt;a href="#updates" class="anchor" name="updates"&gt;&lt;/a&gt;Updates&lt;/h1&gt;
-&lt;p&gt;[15.01.2016] Now it&amp;rsquo;s much easier to execute the e2e tests:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;git clone https://github.com/spring-cloud-samples/brewery.git&#xD;
-cd brewery&#xD;
-bash runAcceptanceTests.sh -t SLEUTH
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;No more symbolic links (and far less of docker-compose) !&lt;/p&gt;
-&lt;p&gt;If you want to run the tests and kill all the apps at the end just execute&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;git clone https://github.com/spring-cloud-samples/brewery.git&#xD;
-cd brewery&#xD;
-bash runAcceptanceTests.sh -t SLEUTH -k 1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Also check out the Brewery project readme for any changes: &lt;a href="https://github.com/spring-cloud-samples/brewery"&gt;https://github.com/spring-cloud-samples/brewery&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
